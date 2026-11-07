@@ -1,0 +1,269 @@
+﻿<UserControl x:Class="Lesson_Link.OrganizationProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        d:DesignHeight="900" d:DesignWidth="1100"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d">
+
+    <UserControl.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#FFFFFF" Offset="0"/>
+            <GradientStop Color="#9798F3" Offset="1"/>
+        </LinearGradientBrush>
+    </UserControl.Background>
+
+    <ScrollViewer Style="{StaticResource AppRootScrollViewer}" Background="Transparent">
+        <Grid Margin="{StaticResource AppPageMargin}" MinWidth="720">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Margin="0,0,0,30">
+                <TextBlock Text="Организация"
+                           FontSize="32" FontWeight="Bold" Foreground="#9798F3"
+                           HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Border HorizontalAlignment="Right" CornerRadius="8" Background="#9798F3">
+                    <Button Content="Главная панель"
+                            Background="Transparent" Foreground="White"
+                            FontSize="16" FontWeight="SemiBold" Padding="20,10" Height="40"
+                            BorderThickness="0" Cursor="Hand" Click="HomeButton_Click"/>
+                </Border>
+            </Grid>
+
+            <!-- Одна белая карточка на всю ширину, поля в двух колонках (как «Управление учителями») -->
+            <Border Grid.Row="1" Background="White" CornerRadius="15" Padding="30" HorizontalAlignment="Stretch">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Данные организации"
+                               FontSize="22" Foreground="#9798F3" FontWeight="Bold" Margin="0,0,0,20"/>
+
+                    <!-- Название | Краткое название -->
+                    <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,0,15,18">
+                        <TextBlock Text="Полное название" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="NameBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="1" Margin="15,0,0,18">
+                        <TextBlock Text="Краткое название" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="ShortNameBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,0,18">
+                        <TextBlock Text="Юридическое название" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="LegalNameBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="3" Grid.Column="0" Margin="0,0,15,18">
+                        <TextBlock Text="ИНН / ОГРН" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="TaxNumberBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="1" Margin="15,0,0,18">
+                        <TextBlock Text="Город" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="CityBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Margin="0,0,0,18">
+                        <TextBlock Text="Юридический адрес" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="AddressBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Margin="0,0,0,18">
+                        <TextBlock Text="Фактический адрес" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="ActualAddressBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="6" Grid.Column="0" Margin="0,0,15,18">
+                        <TextBlock Text="Телефон" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="PhoneBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Grid.Row="6" Grid.Column="1" Margin="15,0,0,18">
+                        <TextBlock Text="Email" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="EmailBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="7" Grid.ColumnSpan="2" Margin="0,0,0,18">
+                        <TextBlock Text="Сайт" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="WebsiteBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="8" Grid.Column="0" Margin="0,0,15,18">
+                        <TextBlock Text="Владелец / директор (ФИО)" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="OwnerBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Grid.Row="8" Grid.Column="1" Margin="15,0,0,18">
+                        <TextBlock Text="Телефон владельца" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="OwnerPhoneBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="9" Grid.ColumnSpan="2" Margin="0,0,0,18">
+                        <TextBlock Text="Email владельца" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="OwnerEmailBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="10" Grid.Column="0" Margin="0,0,15,18">
+                        <TextBlock Text="Номер лицензии" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="LicenseNumberBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Grid.Row="10" Grid.Column="1" Margin="15,0,0,18">
+                        <TextBlock Text="Лимит хранилища (ГБ)" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="StorageLimitGbBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="11" Grid.Column="0" Margin="0,0,15,18">
+                        <TextBlock Text="Дата выдачи лицензии" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <DatePicker x:Name="LicenseIssueDatePicker" Height="45" FontSize="14"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="11" Grid.Column="1" Margin="15,0,0,18">
+                        <TextBlock Text="Дата окончания лицензии" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <DatePicker x:Name="LicenseExpiryDatePicker" Height="45" FontSize="14"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="12" Grid.ColumnSpan="2" Margin="0,0,0,18">
+                        <TextBlock Text="Тарифный план" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8" Padding="4,0">
+                            <ComboBox x:Name="SubscriptionPlanCombo" DisplayMemberPath="Name" SelectedValuePath="Id"
+                                      Height="40" FontSize="16" BorderThickness="0" Background="Transparent"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="13" Grid.Column="0" Margin="0,0,15,18">
+                        <TextBlock Text="Макс. учеников (пусто — без лимита)" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="MaxStudentsBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Grid.Row="13" Grid.Column="1" Margin="15,0,0,18">
+                        <TextBlock Text="Макс. преподавателей" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="MaxTeachersBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="14" Grid.Column="0" Margin="0,0,15,18">
+                        <TextBlock Text="Макс. групп" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8">
+                            <TextBox x:Name="MaxGroupsBox" FontSize="16" MinHeight="46" Background="Transparent"
+                                     BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Grid.Row="14" Grid.Column="1" Margin="15,0,0,18" VerticalAlignment="Bottom">
+                        <CheckBox x:Name="IsActiveCheckBox" Content="Организация активна" FontSize="15" Foreground="#9798F3" Margin="0,8,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="15" Grid.Column="0" Margin="0,0,15,18">
+                        <CheckBox x:Name="IsTrialCheckBox" Content="Пробный период" FontSize="15" Foreground="#9798F3" Margin="0,0,0,12"/>
+                        <TextBlock Text="Окончание пробного периода" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <DatePicker x:Name="TrialEndsAtPicker" Height="45" FontSize="14"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="15" Grid.Column="1" Margin="15,0,0,18">
+                        <TextBlock Text="Окончание подписки" Foreground="#9798F3" FontSize="16" Margin="0,28,0,8"/>
+                        <DatePicker x:Name="SubscriptionEndsAtPicker" Height="45" FontSize="14"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="16" Grid.Column="0" Margin="0,0,15,18">
+                        <TextBlock Text="Дата регистрации" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="8" Background="#F8F8F8">
+                            <TextBox x:Name="CreatedDateDisplay" IsReadOnly="True" FontSize="15" MinHeight="46"
+                                     BorderThickness="0" VerticalContentAlignment="Center" Foreground="#555"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Grid.Row="16" Grid.Column="1" Margin="15,0,0,18">
+                        <TextBlock Text="Последнее обновление" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="8" Background="#F8F8F8">
+                            <TextBox x:Name="UpdatedDateDisplay" IsReadOnly="True" FontSize="15" MinHeight="46"
+                                     BorderThickness="0" VerticalContentAlignment="Center" Foreground="#555"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="17" Grid.ColumnSpan="2" Margin="0,0,0,20">
+                        <TextBlock Text="Создано пользователем (Id)" Foreground="#9798F3" FontSize="16" Margin="0,0,0,8"/>
+                        <Border BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="8" Background="#F8F8F8">
+                            <TextBox x:Name="CreatedByUserIdDisplay" IsReadOnly="True" FontSize="15" MinHeight="46"
+                                     BorderThickness="0" VerticalContentAlignment="Center" Foreground="#555"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="18" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,8,0,0">
+                        <Border CornerRadius="8" Background="#9798F3">
+                            <Button Content="Сохранить" Foreground="White" Background="Transparent" Padding="28,12" FontSize="16" FontWeight="SemiBold"
+                                    BorderThickness="0" Cursor="Hand" Click="Save_Click"/>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+    </ScrollViewer>
+</UserControl>
